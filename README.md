@@ -169,7 +169,8 @@ All steps before training model were similar to model one but the strucure of AN
 3. Table for Comparison of 10 First Records of Predicted and True Target Labels:
    # Prediction Comparison
 
-   | Predicted Labels | Actual Labels |
+
+| Predicted Labels | Actual Labels |
 |-------------------|---------------|
 | 0                 | 4             |
 | 1                 | 2             |
