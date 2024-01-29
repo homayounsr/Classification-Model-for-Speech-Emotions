@@ -65,11 +65,13 @@ Five features were extracted from the speech signal:
 4. Root Mean Square Value (RMS)
 5. Fundamental Frequency (F0)
 
-1. **Zero Crossing Rate (ZCR):** A scalar value, so its shape is (1,).
-2. **MFCC (Mel-frequency cepstral coefficients):** Typically, a vector with a variable number of coefficients, so its shape is be (n_mfcc,).
-3. **Chroma STFT:** A vector with a variable number of coefficients, so its shape is (n_chroma,).
-4. **Root Mean Square Value (RMS):** A scalar value, so its shape is (1,).
-5. **F0 (Fundamental Frequency):** A scalar value, so its shape is (1,).
+
+
+- **Zero Crossing Rate (ZCR):** A scalar value, so its shape is (1,).
+- **MFCC (Mel-frequency cepstral coefficients):** Typically, a vector with a variable number of coefficients, so its shape is be (n_mfcc,).
+- **Chroma STFT:** A vector with a variable number of coefficients, so its shape is (n_chroma,).
+- **Root Mean Square Value (RMS):** A scalar value, so its shape is (1,).
+- **F0 (Fundamental Frequency):** A scalar value, so its shape is (1,).
 
 When these features are concatenated the shape of the resulting array will be the sum of the individual shapes along the horizontal axis. Therefore, the shape of output is (35,1)
 
