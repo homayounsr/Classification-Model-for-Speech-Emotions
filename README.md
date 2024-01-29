@@ -144,11 +144,81 @@ When these features are concatenated the shape of the resulting array will be th
 There is an evident sign of overfitting based on the classification report.
 
 
+### 2. ANN model with data augmentation
+
+All steps before training model were similar to model one but the strucure of ANN model was different due to the increase in the number of data:
+
+- **Input Layer:** The input layer is designed to match the number of neurons with the input feature dimension. This ensures that the neural network can efficiently process the input data.
+- **Hidden Layer 1:** The first hidden layer consists of 256 neurons, each utilizing the Rectified Linear Unit (ReLU) activation function. ReLU is a common choice for introducing non-linearity to the model.
+- **Hidden Layer 2:** The second hidden layer is comprised of 128 neurons, also employing the ReLU activation function. Additional hidden layers allow the model to capture more complex patterns in the data.
+- **Hidden Layer 3:** The third hidden layer has 32 neurons, again using the ReLU activation function. The decreasing number of neurons in subsequent layers is a design choice and can help extract higher-level features.
+- **Output Layer:** The output layer has a number of neurons equal to the classes in the target variable. The softmax activation function is applied to obtain probability distributions across multiple classes, making it suitable for multiclass classification tasks.
+
+
+## Result for ANN model without data augmentation
+1. Training and Validation Accuracy and Training and Validation Loss Before Data Augmentation:
+
+<img src="./outputs/val_test_loss_with_aug.png"/>
+
+2. Confusion Matrix:
+
+<img src="./outputs/confmat_with_aug.png"/>
+
+3. Table for Comparison of 10 First Records of Predicted and True Target Labels:
+   # Prediction Comparison
+
+   | Predicted Labels | Actual Labels |
+|-------------------|---------------|
+| 0                 | 4             |
+| 1                 | 2             |
+| 2                 | 4             |
+| 3                 | 7             |
+| 4                 | 2             |
+| 5                 | 7             |
+| 6                 | 3             |
+| 7                 | 3             |
+| 8                 | 5             |
+| 9                 | 3             |
+
+
+
+4. Precision, Recall, F1-Score Metrics:
+   # Classification Metrics
+
+   
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.90      | 0.75   | 0.82     | 222     |
+| 1     | 0.67      | 0.77   | 0.72     | 179     |
+| 2     | 0.65      | 0.71   | 0.68     | 195     |
+| 3     | 0.65      | 0.69   | 0.67     | 176     |
+| 4     | 0.64      | 0.64   | 0.64     | 184     |
+| 5     | 0.79      | 0.87   | 0.83     | 204     |
+| 6     | 0.66      | 0.55   | 0.60     | 194     |
+| 7     | 0.74      | 0.70   | 0.72     | 182     |
+|-------|-----------|--------|----------|---------|
+| Train Accuracy | 0.8964 | 
+| Test Accuracy | 0.7055 | 
+
+
+
+## Conclusion
+It is evident that data augmentation has significantly reduced the overfitting problem. The initial model showed a substantial 33% difference between training and test accuracy, which has now been reduced to 19% after incorporating data augmentation. 
+
+However, there is still room for improvement in the model's performance. Extracting additional features and further enhancing data augmentation techniques could potentially lead to better results and increased generalization capabilities.
 
 
 
 
+## References
 
+[1] Aouani, H., & Ayed, Y. B. (2018, March). Emotion recognition in speech using MFCC with SVM, DSVM and auto-encoder. In *2018 4th International conference on advanced technologies for signal and image processing (ATSIP)* (pp. 1-5). IEEE. → MFCC
+
+[2] Khan, A., & Roy, U. K. (2017, March). Emotion recognition using prosodie and spectral features of speech and Naïve Bayes Classifier. In *2017 international conference on wireless communications, signal processing and networking (WiSPNET)* (pp. 1017-1021). IEEE. →MFCC
+
+[3] Zhang, S., Zhang, S., Huang, T., & Gao, W. (2017). Speech emotion recognition using deep convolutional neural network and discriminant temporal pyramid matching. *IEEE Transactions on Multimedia*, *20*(6), 1576-1590. → MFCC
+
+[4] Hassan, E. A., El Gayar, N., & Moustafa, M. G. (2010, November). Emotions analysis of speech for call classification. In *2010 10th International Conference on Intelligent Systems Design and Applications* (pp. 242-247). IEEE.  → LPC., MFCC
 
 
 
