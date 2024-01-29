@@ -107,7 +107,41 @@ When these features are concatenated the shape of the resulting array will be th
 
 <img src="./outputs/confmat_no_aug.png"/>
 
+3. Table for Comparison of 10 First Records of Predicted and True Target Labels:
+   # Prediction Comparison
 
+| Predicted Labels | Actual Labels |
+|-------------------|---------------|
+| 0                 | 0             |
+| 1                 | 4             |
+| 2                 | 3             |
+| 3                 | 6             |
+| 4                 | 1             |
+| 5                 | 6             |
+| 6                 | 3             |
+| 7                 | 1             |
+| 8                 | 6             |
+| 9                 | 7             |
+
+
+4. Precision, Recall, F1-Score Metrics:
+
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| 0     | 0.67      | 0.76   | 0.71     | 34      |
+| 1     | 0.63      | 0.82   | 0.71     | 45      |
+| 2     | 0.57      | 0.55   | 0.56     | 38      |
+| 3     | 0.68      | 0.55   | 0.61     | 38      |
+| 4     | 0.59      | 0.45   | 0.51     | 42      |
+| 5     | 0.86      | 0.74   | 0.80     | 43      |
+| 6     | 0.56      | 0.68   | 0.61     | 28      |
+| 7     | 0.67      | 0.65   | 0.66     | 40      |
+|-------|-----------|--------|----------|---------|
+| Train Accuracy | 0.9695 | 
+| Test Accuracy | 0.6382 | 
+
+There is an evident sign of overfitting based on the classification report.
 
 
 
