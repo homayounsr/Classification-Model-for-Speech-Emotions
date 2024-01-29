@@ -8,4 +8,4 @@ The first step is to understand the type of data we are working with.
 ### Distribution of data for each emotion
 
 The plot e below displays the distribution of emotions in a dataset. Each emotion occurs 192 times, except for "neutral," which appears 96 times. The dataset is relatively balanced across emotions.
-<img src="./Plots//EDA/Count for each emotions.png"/>
+<img src="./EDA/Count for each emotions.png"/>
