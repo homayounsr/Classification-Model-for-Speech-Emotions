@@ -158,7 +158,7 @@ All steps before training model were similar to model one but the strucure of AN
 
 
 ## Result for ANN model without data augmentation
-1. Training and Validation Accuracy and Training and Validation Loss Before Data Augmentation:
+1. Training and Validation Accuracy and Training and Validation Loss After Data Augmentation:
 
 <img src="./outputs/val_test_loss_with_aug.png"/>
 
