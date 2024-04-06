@@ -157,7 +157,7 @@ All steps before training model were similar to model one but the strucure of AN
 - **Output Layer:** The output layer has a number of neurons equal to the classes in the target variable. The softmax activation function is applied to obtain probability distributions across multiple classes, making it suitable for multiclass classification tasks.
 
 
-## Result for ANN model without data augmentation
+## Result for ANN model after data augmentation
 1. Training and Validation Accuracy and Training and Validation Loss After Data Augmentation:
 
 <img src="./outputs/val_test_loss_with_aug.png"/>
